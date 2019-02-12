@@ -1,3 +1,15 @@
-<p>
-  login works!
-</p>
+<div class="comtainer">
+  <div class="row">
+    <form class='col-lg-4 mx-auto' (ngSubmit)='addDataHandler(form)' #form='ngForm'>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input [(ngModel)]='login.loginUser' name='loginUser' type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input [(ngModel)]='login.passwordUser' name='passwordUser' type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+      </div>
+      <button [disabled]='form.invalid' type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

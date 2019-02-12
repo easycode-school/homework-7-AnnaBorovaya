@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
   }
 
+  /**
+   * logoutHandler - метод-хендлер очищает при клике на кнопку данный в localStorage
+   * и редиректит на страницу login
+   */
+  logoutHandler() {
+    localStorage.clear();
+    this.router.navigate([`/login`]);
+  }
 }

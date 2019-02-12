@@ -14,6 +14,10 @@ export class AboutComponent implements OnInit {
     private title: Title
   ) { }
 
+  /**
+   * ngOnInit - получаем данные свойства data - title,
+   * а затем устанавливаем данный заголовок при  переходе на страницу About
+   */
   ngOnInit() {
     this.route.data.subscribe((item) => {
       this.title.setTitle(item.title);

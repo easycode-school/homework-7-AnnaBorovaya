@@ -7,7 +7,11 @@ export class AuthService {
 
   constructor() { }
 
+  /**
+   * isAuth - проверяет записаны ли данный в localStorage
+   * возвращает true или false
+   */
   isAuth() {
-    return localStorage.getItem('token') ? true : false;
+    return localStorage.getItem('name') && localStorage.getItem('password') ? true : false;
   }
 }

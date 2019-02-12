@@ -1,0 +1,17 @@
+<div class="comtainer">
+  <div class="row">
+    <form class='col-lg-4 mx-auto' (ngSubmit)='editHandler(form)' #form='ngForm'>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Edit name</label>
+        <input [(ngModel)]='userCurrentEdit.name' name='name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Edit" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Edit email</label>
+        <input [(ngModel)]='userCurrentEdit.email' name='email' type="text" class="form-control" id="exampleInputPassword1" placeholder="Edit" required>
+      </div>
+      <button [disabled]='form.invalid' type="submit" class="btn btn-primary">Edit</button>
+    </form>
+  </div>
+</div>
+
+

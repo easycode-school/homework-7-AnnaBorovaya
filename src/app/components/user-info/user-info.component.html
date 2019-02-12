@@ -1,5 +1,6 @@
 <div class="container">
-  <button class="btn btn-primary" (click)="navigateExmpl()">Go back</button>
+  <button class="btn btn-primary mr-3" (click)="backHandler()">Go back</button>
+  <button class="btn btn-warning" (click)="navigateUserEdit()">Edit</button>
   <ul class="list-group mt-5">
     <li class="list-group-item">{{ user?.name }}</li>
     <li class="list-group-item">{{ user?.email }}</li>
